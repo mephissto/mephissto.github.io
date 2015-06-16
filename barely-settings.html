@@ -66,6 +66,9 @@
 	            var bits = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/g, function (match, key, value) {
 	              params[key] = value;
 	            });
+
+              console.log("getUrlOptions params = " + JSON.stringify(params));
+
 	            return params;
 	        }
 
