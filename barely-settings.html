@@ -78,7 +78,16 @@
 	            var field = $("#"+key);
 	            if (field !== null) {
 	              var value = decodeURIComponent(params[key]);
-	              field.val(value).slider("refresh");
+
+                if (key == "KEY_THEME") {
+                  $('#KEY_THEME').find('option[value="' + value + '"]')
+                    .siblings().removeAttr('selected')
+                    .end().attr('selected', 'selected')
+                    .end().selectmenu("refresh");
+                }
+                else {
+                  field.val(value).slider("refresh");
+                }
 	            }
 	          }
 	        }
