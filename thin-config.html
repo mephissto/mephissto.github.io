@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Thin Configuration</title>
+    <title>Thin Moded Configuration</title>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
   </head>
   <body>
-    <h2>Thin Configuration</h2>
+    <h2>Thin Modid Configuration</h2>
     <p>
       Choose settings, click 'Save' and reload app to apply.
     </p>
@@ -74,9 +74,7 @@
 
         $('#theme').find('option[value="' + persistRead('theme', 'blue') + '"]')
           .siblings().removeAttr('selected')
-          .end().attr('selected', 'selected')
-          .end().selectmenu("refresh");
-
+          .end().attr('selected', 'selected');
       }
 
 
