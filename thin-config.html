@@ -20,10 +20,10 @@
         <td>Theme</td>
         <td>
           <select name="theme" id="theme">
-            <option value="0" selected="selected">Blue</option>
-            <option value="1">Green</option>
-            <option value="2">Red</option>
-            <option value="3">Purple</option>
+            <option value="blue" selected="selected">Blue</option>
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+            <option value="purple">Purple</option>
           </select>
         </td>
       </tr>
@@ -87,11 +87,9 @@
             'bluetooth': document.getElementById('check_bluetooth').checked ? 'true' : 'false',
             'battery': document.getElementById('check_battery').checked ? 'true' : 'false',
             'second_hand': document.getElementById('check_second_hand').checked ? 'true' : 'false',
-            'theme': $('#theme').val()
+            'theme': '' + $('#theme').val()
           };
           var location = 'pebblejs://close#' + encodeURIComponent(JSON.stringify(options));
-
-          console.log("location : " + location)
 
           persistWrite('date', options.date);
           persistWrite('day', options.day);
